@@ -8,7 +8,7 @@ const inputData = [
         { "fieldName": "user_name", "type": "text", "size": 50, "constraints": ["mandatory", "unique"] },
         { "fieldName": "email", "type": "text", "size": 50, "constraints": ["unique", "mandatory"] },
         { "fieldName": "password", "type": "text", "size": 50, "constraints": ["mandatory", "check"], "minLength": 8 },
-        { "fieldName": "role", "type": "text", "size": 50, "constraints": ["unique", "mandatory"], "audit": true },
+        { "fieldName": "role", "type": "text", "size": 50, "constraints": ["unique", "mandatory"] },
         { "fieldName": "active", "type": "number", "size": 2, "constraints": ["mandatory"] },
 
         ]
@@ -19,7 +19,7 @@ const inputData = [
             { "fieldName": "name", "type": "text", "size": 50, "constraints": ["mandatory", "unique"] },
             { "fieldName": "brand_name", "type": "text", "size": 50, "constraints": ["mandatory"] },
             { "fieldName": "ram", "type": "number", "size": 10, "constraints": ["mandatory"] },
-            { "fieldName": "price", "type": "number", "size": 10, "constraints": ["mandatory"], "audit": true },
+            { "fieldName": "price", "type": "number", "size": 10, "constraints": ["mandatory"], },
             { "fieldName": "active", "type": "number", "size": 2, "constraints": ["mandatory"] },
 
         ],

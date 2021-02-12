@@ -48,11 +48,31 @@ class SQLGenerater {
             content += `,`;
             // }
             // i++;
+            if (fieldObj.audit == true) {
+                content += ` created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP`;
+                content += `,`;
+                content += ` modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`;
+                content += `,`;
+                content += ` created_by int not null`
+                content += `,`;
+                content += ` modified_by int not null`
+                content += `,`;
+            }
 
         }
         content += `\n`;
         // var result = 
         content += await this.getConstraintsForAllFields(tableObj.fields);
+        for (let fieldObj of tableObj.fields) {
+            if (fieldObj.audit == true) {
+                content += `foreign key (created_by) references users(id)`
+                content += `,\n`;
+                content += `foreign key (modified_by) references users(id),`
+                content += `,`;
+
+            }
+        }
+
         content = content.substr(0, content.length - 2);
         content += `\n);`
 
