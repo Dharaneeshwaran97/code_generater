@@ -44,7 +44,6 @@ class SQLGenerater {
                 }
             }
 
-
             // if (i != tableObj.fields.length) {
             content += `,`;
             // }
