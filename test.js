@@ -20,6 +20,8 @@ const inputData = [
             { "fieldName": "brand_name", "type": "text", "size": 50, "constraints": ["mandatory"] },
             { "fieldName": "ram", "type": "number", "size": 10, "constraints": ["mandatory"] },
             { "fieldName": "price", "type": "number", "size": 10, "constraints": ["mandatory"], "audit": true },
+            { "fieldName": "active", "type": "number", "size": 2, "constraints": ["mandatory"] },
+
         ],
 
 
